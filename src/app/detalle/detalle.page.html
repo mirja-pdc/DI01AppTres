@@ -7,12 +7,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
 
-    <!-- TODO (Apartado 2):
+    <!-- DONE (Apartado 2):
          Añadir <ion-buttons slot="start"> con <ion-back-button> para volver a la página de inicio.
           - Usa el atributo defaultHref="/home" para asegurar que el botón funcione incluso si se accede directamente a esta página.
           Estructura de referencia (teoría, apartado 2 – ion-back-button)
     -->
-
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
 
      <!-- TODO (Apartado 3 – Interpolación):
          Mostrar el nombre del elemento en el título usando
