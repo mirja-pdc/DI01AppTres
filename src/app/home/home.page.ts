@@ -64,7 +64,7 @@ export class HomePage {
     }); 
   }
 
-  // TODO (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
+  // DONE (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
   async mostrarToast(): Promise<void> {
     // Consulta la teoría: apartado "ion-toast vs ion-alert"
     const toast = await this.toastController.create({
