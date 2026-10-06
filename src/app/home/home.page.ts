@@ -1,4 +1,5 @@
-//TODO - importar Router de @angular/router
+// DONE - importar Router de @angular/router
+import { Router } from '@angular/router';
 import { Component, inject } from '@angular/core';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent, IonFooter,
