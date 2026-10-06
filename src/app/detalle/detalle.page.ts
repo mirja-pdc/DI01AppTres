@@ -17,9 +17,9 @@ import { Elemento } from '../models/elemento.model';
 })
 export class DetallePage implements OnInit {
 
-  // TODO (Apartado 3 – Interpolación)
-  //elementoDetalle será del tipo Elemento o null
-  elementoDetalle = null;
+  // DONE (Apartado 3 – Interpolación)
+  // elementoDetalle será del tipo Elemento o null
+  elementoDetalle: Elemento | null = null;
 
   constructor() {}
 
