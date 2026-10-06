@@ -52,12 +52,16 @@ export class HomePage {
 
   constructor() {};
 
-  // TODO (Apartado 2 – Navegación): 
+  // DONE (Apartado 2 – Navegación): 
   // Desarrollar el método verDetalle que recibirá un Elemento como parámetro
   // Navegar a /detalle con el elemento seleccionado
-  verDetalle(): void {
+  verDetalle(elemento: Elemento): void {
     // Pista: this.router.navigate mediante state
-    
+    // A this.router.navigate se le pasan la ruta destino en un array (['/detalle']) 
+    // y un objeto de opciones con la propiedad state
+    this.router.navigate(['/detalle'], {
+      state: { elemento }
+    }); 
   }
 
   // TODO (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
