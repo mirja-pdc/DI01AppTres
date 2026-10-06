@@ -3,7 +3,7 @@
   Implementa los TODOs siguiendo los apartados indicados en la teoría.
 -->
 
-<!-- TODO (Apartado 1 + 2): Encabezado con ion-back-button y título del elemento seleccionado -->
+<!-- DONE (Apartado 1 + 2): Encabezado con ion-back-button y título del elemento seleccionado -->
 <ion-header [translucent]="true">
   <ion-toolbar>
 
@@ -28,7 +28,7 @@
 
 <ion-content [fullscreen]="true">
 
-  <!-- TODO (Apartado 1 + 3 – Interpolación):
+  <!-- DONE (Apartado 1 + 3 – Interpolación):
        Mostrar los datos del elemento seleccionado.
 
        Estructura sugerida:
@@ -46,6 +46,28 @@
 
        Si no hay elemento seleccionado, muestra un mensaje informativo.
   -->
-
+       
+  <!-- Si hay un elemento seleccionado, muestra sus detalles -->
+  @if (elementoDetalle) {
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h2>{{ elementoDetalle.nombre }}</h2>
+          <p>{{ elementoDetalle.descripcion }}</p>
+        </ion-label>
+      </ion-item>
+      <!-- En la interfaz Elemento (elemento.model.ts), categoria es opcional, así que solo se muestra si existe -->
+      @if (elementoDetalle.categoria) {
+        <ion-item>
+          <ion-label>Categoría: {{ elementoDetalle.categoria }}</ion-label>
+        </ion-item>
+      }
+    </ion-list>
+  } @else {
+    <!-- Si no hay elemento seleccionado, muestra un mensaje informativo -->
+    <ion-item>
+      <ion-label color="warning">No hay ningún elemento seleccionado.</ion-label>
+    </ion-item>
+  }
 
 </ion-content>
