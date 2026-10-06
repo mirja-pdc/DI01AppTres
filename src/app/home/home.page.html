@@ -19,8 +19,8 @@
 
   <ion-list>
     @for (elemento of elementosFiltrados; track elemento.id) {
-      <!--TODO: Añadir llamada al método verDetalle-->
-      <ion-item button="true">
+      <!--DONE: Añadir llamada al método verDetalle pasando el elemento actual -->
+      <ion-item button="true" (click)="verDetalle(elemento)">
         <ion-label>
           <h2>{{ elemento.nombre }}</h2>
           <p>{{ elemento.descripcion }}</p>
