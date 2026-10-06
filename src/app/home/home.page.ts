@@ -18,6 +18,7 @@ import { Elemento } from '../models/elemento.model';
     FormsModule
   ],
 })
+
 export class HomePage {
 
   busqueda: string = '';
@@ -43,7 +44,8 @@ export class HomePage {
     );
   }
 
-  // TODO Injectar Router
+  // DONE Injectar Router
+  private router = inject(Router);
 
   private toastController = inject(ToastController);
 
